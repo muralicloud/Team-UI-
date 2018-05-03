@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>draggable demo</title>
+  <script
+          
+              src="https://code.jquery.com/jquery-3.3.1.js"
+              integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+              crossorigin="anonymous">
+          
+    </script>
+  
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+
+  <style>
+  #draggable {
+    border: 2px solid black;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    box-shadow: 2px 2px;
+    background: radial-gradient(orange, green, yellow);
+    /*float: ; */
+    width: 100px; 
+    height: 100px;
+    margin: 15px;
+    padding: 10px;
+    filter: drop-shadow(2px 12px 4px navy);
+  }
+  </style>
+  
+</head>
+<body>
+ 
+<div id="draggable">Drag me</div>
+ 
+<script>
+$( "#draggable" ).draggable();
+</script>
+ 
+</body>
+</html>

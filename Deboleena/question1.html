@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Apple Question-1</title>
+	<script
+		  
+			  src="https://code.jquery.com/jquery-3.3.1.js"
+			  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+			  crossorigin="anonymous">
+		  
+	</script>
+
+</head>
+<body>
+	<div id="parent">
+		 This is my parent div. 
+		<div>
+			<h2> This is my first child div. </h2> 
+			<div >
+				<h2> This is my nested div inside first child div. </h2> 
+			</div>
+			<!-- This is my first child div. -->
+		
+			<!-- This is my first child div. -->
+		</div>
+		<div >
+			 <h2> This is my second child div. </h2>
+			<!-- This is my second child div. -->
+		</div>
+		<div >
+			<h2> This is my third child div. </h2> 
+			<!-- This is my third child div.  -->
+		</div>
+		<div >
+			<h2> This is my n'th child div. </h2> 
+			<!-- This is my nth child div.  -->
+		</div>
+
+	</div>
+
+</body>
+<script type="text/javascript">
+
+	$(document).ready(function(){
+	// 	$('#parent').click(function(){
+	// 			$('#parent').css("color", "red");
+	// 	});
+		
+		$('#parent').on('click', '*', function(e) {
+			$(this).css( "color", "red" );
+			console.log(e.target);
+			console.log("------------");
+			console.log( e.currentTarget );
+			$(this).stopPropagation();
+		});
+		
+		
+	});
+</script>
+</html>
