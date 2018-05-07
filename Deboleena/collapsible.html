@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+ <link rel=icon href="https://cdn.dribbble.com/users/25514/screenshots/1566322/book-mac-app-icon-design-psd-free-ramotion.png" type="image/gif"sizes="16*16">
+<script src="collapsible.js"></script>
+ <style>
+        #pageone{
+          background-image: url("http://atgbcentral.com/data/out/72/4546040-background-image.jpg");
+        }
+        table {
+            width:80%;
+            padding: 10px;
+            margin:auto;
+            text-align: center;
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 15px;
+            text-align: center;
+        }
+        table#t01 tr:nth-child(even) {
+            background-color: #eee;
+        }
+        table#t01 tr:nth-child(odd) {
+           background-color: #FFE4B5;
+        }
+        table#t01 th {
+            background-color: #008000;
+            color: white;
+        
+    }
+
+  </style>
+</head>
+  
+<body>
+
+  <div data-role="page" id="pageone">
+  <img class="image1" src="http://www.pro-tekconsulting.com/images/pro-tek-it-consulting.png">
+    <div data-role="header" >
+      <h1>Acount info</h1>
+    </div>
+
+      <div data-role="main" class="ui-content">
+        <div data-role="collapsibleset">
+          <div data-role="collapsible">
+            <h3>Account Table1</h3>
+            <h2 align='center'>Customer Info</h2>
+
+            <table id="t01" ">
+                <!-- ADD HEADERS -->
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Order Number</th>
+                    <th>Action</th>
+                </tr>
+
+                <!-- POPULATE TABLE -->
+                <tr>
+                    <td>Deboleena</td>
+                    <td>San Jose</td>
+                    <td>c1</td>
+                    <td>
+                        <button class="btn" >Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Bindu</td>
+                    <td>Sunnyvale</td>
+                    <td>c2</td>
+                    <td>
+                        <button class="btn" >Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sanjana</td>
+                    <td>Santa Clara</td>
+                    <td>c3</td>
+                    <td>
+                        <button class="btn" >Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Swati</td>
+                    <td>Fremont</td>
+                    <td>c4</td>
+                    <td>
+                        <button class="btn" >Delete</button>
+                    </td>
+                </tr>
+            </table>
+          </div>
+    
+
+
+
+</div> 
+
+</body>
+
+</html>
