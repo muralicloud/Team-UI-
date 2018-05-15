@@ -1,0 +1,19 @@
+#id1{
+    padding-top : 30px;
+}
+#tr{
+    background-color: darkcyan;
+}
+#button{
+    
+     margin-top : 3%;
+     display:block;
+}
+.edit{
+    border: 2px;
+    margin : auto;
+    text-align: center;
+    width : 40%;
+    padding: 10px, 10px;
+    background-color: cadetblue;
+}

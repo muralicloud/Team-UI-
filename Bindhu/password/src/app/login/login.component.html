@@ -1,0 +1,19 @@
+
+<h2 align="center">Login Page</h2>
+<div class="imgcontainer">
+    <img src="https://cdn4.iconfinder.com/data/icons/peppyicons-rounded/512/user9-512.png" alt="image"  width="120" height="120">  
+</div>
+<form action = "DashBoard1.html" id="form">
+    <div class="container">
+        <label for="Username">UserName</label>
+        <input type="text" placeholder="Enter Username" name="name" required/><br><br>
+        <label for="Password">Password</label>&nbsp;&nbsp;
+        <input type="password" placeholder="Enter Password" name="password" [(ngModel)]=user.password (keyup)="onKey()" required/><br><br><br>
+    </div>
+    <div class="characterClass">
+        <label><input id="capital" name="capital" [(ngModel)]=capital type="checkbox"> At least <strong>one capital letter</strong></label><br>
+        <label><input id="number" name="number" [(ngModel)]=number type="checkbox"> At least <strong>one number</strong></label><br>
+        <label><input id="length" name="len" [(ngModel)]=len type="checkbox"> Be at least <strong>8 characters</strong></label><br>
+        <label><input id="symbol" name="symbol" [(ngModel)]=symbol type="checkbox"> At least <strong>one symbol</strong></label><br>
+    </div>
+</form>

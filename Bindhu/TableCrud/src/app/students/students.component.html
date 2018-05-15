@@ -1,0 +1,90 @@
+<div class="container">
+  <div class="col-md-12">
+    <h2 id="id1" align="center">Student List</h2><br>
+      <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr id ="tr">
+                <th class="text-center">ID</th>
+                <th class="text-center">FirstName</th>
+                <th class="text-center">LastName</th>
+                <th class="text-center">Department</th>
+                <th class="text-center">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let student of students">
+                <td class="text-center">{{ student.id }}</td>
+                <td class="text-center">{{ student.firstName }}</td>
+                <td class="text-center">{{ student.lastName }}</td>
+                <td class="text-center">{{ student.department}}</td>
+                <td class="text-center">
+                <button class="btn btn-info"
+                        (click)="showEditStudentForm(student)">
+                       <i class="fa fa-edit"></i>Edit
+                    </button>
+                <button class="btn btn-danger"
+                       (click)="removeStudent(student)">
+                       <i class="fa fa-minus"></i>Delete
+                </button>
+                </td>
+            </tr>
+          </tbody>
+      </table>
+
+      <button id="button"class="btn btn-success" 
+               (click)="showAddStudentForm()">Add new Student<i class="fa fa-plus"></i></button>
+        <br />
+        <br />
+ 
+  <form *ngIf="studentForm">
+      <h2>Add Student details</h2>
+    <p>ID: <input type="text"
+                           name="id"
+                           [(ngModel)]="newStudent.id" /></p>
+    <p>FirstName: <input type="text"
+                                 name="firstName"
+                                 [(ngModel)]="newStudent.firstName" /></p>
+    <p>LastName: <input type="text"
+                                          name="lastName"
+                                          [(ngModel)]="newStudent.lastName" /></p>
+    <p>Department: <input type="text"
+                                name="department"
+                                [(ngModel)]="newStudent.department" /></p>
+    <p>
+      <button type="button"
+                   class="btn btn-primary"
+                   (click)="saveStudent(newStudent)">Submit</button>
+      <button type="button"
+                   class="btn btn-warning"
+                   (click)="cancelNewStudent()">Cancel</button>
+    </p>
+   </form>
+     <div class="edit">
+        <form *ngIf="editStudentForm">
+            <h2>Edit Student Details</h2>
+            <p>ID: <input type="text"
+                           name="id"
+                           [(ngModel)]="editedStudent.id" /></p>
+            <p>FirstName: <input type="text"
+                                 name="firstName"
+                                 [(ngModel)]="editedStudent.firstName" /></p>
+            <p>LastName: <input type="text"
+                                          name="lastName"
+                                          [(ngModel)]="editedStudent.lastName" /></p>
+            <p>Department: <input type="text"
+                                name="department"
+                                [(ngModel)]="editedStudent.department" /></p>
+            <p>
+                <button type="button"
+                   class="btn btn-primary"
+                   (click)="updateStudent(editedStudent)">Submit</button>
+                <button type="button"
+                   class="btn btn-warning"
+                   (click)="cancelEdits()">Cancel</button>
+            </p>
+        </form>
+     </div>
+   </div>
+</div>
+
+
